@@ -11,6 +11,10 @@ The Teacher and Student can have more custom data such as name, degree, school, 
 $ git clone https://github.com/mehdijai/laravel-multi-user-auth.git
 ```
 
+```shell
+cd laravel-multi-user-auth
+```
+
 2 - Install Composer packages
 
 ```shell
@@ -310,6 +314,9 @@ Move to `App\Http\Controllers\Auth\RegisterUserController.php`
 Update "store" function
 
 ```php
+use App\Models\Student;
+use App\Models\Teacher;
+...
 $request->validate([
     ...
     'role' => ['required', 'numeric', 'exists:roles,id'],
@@ -319,6 +326,18 @@ $user = User::create([
     ...
     'role_id' => $request->role,
 ]);
+
+if($request->role == 1){
+    Teacher::create([
+        'name' => $request->name,
+        'user_id' => $user->id
+    ]);
+}else if($request->role == 2){
+    Student::create([
+        'name' => $request->name,
+        'user_id' => $user->id
+    ]);
+}
 ```
 
 ## Update HOME constant

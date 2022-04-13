@@ -3,6 +3,54 @@
 This project is a showcase of authentication system for multi-users use. The application will have Teacher and Student, which will be authenticated with the same Register and Login form.
 The Teacher and Student can have more custom data such as name, degree, school, speciality...
 
+## Clone this project?
+
+1 - Clone
+
+```shell
+$ git clone https://github.com/mehdijai/laravel-multi-user-auth.git
+```
+
+2 - Install Composer packages
+
+```shell
+$ composer install
+```
+
+3 - Install NPM packages
+
+```shell
+$ npm install
+```
+
+4 - Create .env and copy .env.example content.
+
+5 - Setup Database and update .env
+
+6 - Migrate Database changes
+
+```shell
+$ php artisan migrate
+```
+
+7 - Create pre-defined roles
+
+```shell
+$ php artisan db:seed
+```
+
+8 - Optimize and clear cache
+
+```shell
+$ php artisan optimize:clear
+```
+
+9 - Serve application
+
+```shell
+$ php artisan serve
+```
+
 ## Setup Laravel Project
 
 ### Create Laravel project

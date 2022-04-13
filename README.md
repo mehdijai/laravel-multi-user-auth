@@ -31,25 +31,31 @@ $ npm install
 
 5 - Setup Database and update .env
 
-6 - Migrate Database changes
+6 - Generate App Key
+
+```shell
+$ php artisan key:generate
+```
+
+7 - Migrate Database changes
 
 ```shell
 $ php artisan migrate
 ```
 
-7 - Create pre-defined roles
+8 - Create pre-defined roles
 
 ```shell
 $ php artisan db:seed
 ```
 
-8 - Optimize and clear cache
+9 - Optimize and clear cache
 
 ```shell
 $ php artisan optimize:clear
 ```
 
-9 - Serve application
+10 - Serve application
 
 ```shell
 $ php artisan serve
